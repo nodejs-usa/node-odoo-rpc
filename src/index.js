@@ -16,6 +16,13 @@ odoo.connect(function (err) {
     var params = [];
     params.push(inParams);
 
+    // 1- Login
+    odoo.connect(function (err) {
+        if (err) { return console.log(err); }
+        console.log('Connected to Odoo server.');    
+    });
+
+    // 2- Use Search
     odoo.execute_kw('res.partner', 'search', params, function (err, value) {
         if (err) { return console.log(err); }
         value.forEach(element => console.log(element));
