@@ -1,0 +1,23 @@
+{
+  "name": "node-odoo-rpc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodejs-usa/node-odoo-rpc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nodejs-usa/node-odoo-rpc/issues"
+  },
+  "homepage": "https://github.com/nodejs-usa/node-odoo-rpc#readme",
+  "dependencies": {
+    "odoo-xmlrpc": "^1.0.8"
+  }
+}
