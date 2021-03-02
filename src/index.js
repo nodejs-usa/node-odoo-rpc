@@ -1,3 +1,6 @@
+// https://www.npmjs.com/package/odoo-xmlrpc
+
+
 var Odoo = require('odoo-xmlrpc');
 
 var odoo = new Odoo({
@@ -50,11 +53,33 @@ odoo.connect(function (err) {
         });
     });
 
+    // 5- Create
     var inParams = [];
     inParams.push({'name': 'Marlon'})
     var params = [];
     params.push(inParams);
     odoo.execute_kw('res.partner', 'create', params, function (err, value) {
+        if (err) { return console.log(err); }
+        console.log('Result: ', value);
+    });
+
+    // 6- Update
+    var inParams = [];
+    inParams.push([1]); //id to update
+    inParams.push({'name': 'Hello Marlon'})
+    var params = [];
+    params.push(inParams);
+    odoo.execute_kw('res.partner', 'write', params, function (err, value) {
+        if (err) { return console.log(err); }
+        console.log('Result: ', value);
+    });
+
+    // 7-  Delete
+    var inParams = [];
+    inParams.push([11]); //id to delete
+    var params = [];
+    params.push(inParams);
+    odoo.execute_kw('res.partner', 'unlink', params, function (err, value) {
         if (err) { return console.log(err); }
         console.log('Result: ', value);
     });
