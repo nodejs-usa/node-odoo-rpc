@@ -1,5 +1,5 @@
 // https://www.npmjs.com/package/odoo-xmlrpc
-
+// npm install odoo-xmlrpc
 
 var Odoo = require('odoo-xmlrpc');
 
